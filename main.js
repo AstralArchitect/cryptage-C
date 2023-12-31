@@ -23,8 +23,12 @@ function codage(code, cle) {
             listecle[1] = 1
             listecle[2] += 24
         }
-        codé[i] -= listecle[1];
+        codé[i] * listecle[1];
         listecle[1] += 24;
+        if(listecle[2] > (255 - 23)) {
+            listecle[2] = 1
+            listecle[0] += 24
+        }
     }
 }
 function getCodeASCII(liste, cle) {
