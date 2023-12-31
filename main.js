@@ -9,10 +9,17 @@ function codage(code, cle) {
         console.log('Veuillez fournir la clé en ligne de commande.');
         process.exit(1); // Quitter le processus avec un code d'erreur
     }
-
-    // La variable listecle est déjà disponible ici, pas besoin de la réassigner
-    // Premier rotor
-    
+    let codé = code;
+    for(let i = 0;i < code.length; i++){
+        // Premier rotor
+        codé[i] += listecle[0];
+        listecle[0] += 27;
+        // Deuxième rotor
+        if(listecle[0] > (255 - 23)) {
+            listecle[0] = 1
+            listecle[1] += 1
+        }
+    }
 }
 function getCodeASCII(liste, cle) {
     if (!liste) {
@@ -38,7 +45,7 @@ const rl = readline.createInterface({
 
 rl.question('Quel message ? ', (message) => {
     const cle = rl.question('Quelle est la clé ? ', (cle) => {
-        listecle = cle.split('-')
+        listecle = cle.split('-');
         getCodeASCII(message, cle);
         rl.close();
     });
