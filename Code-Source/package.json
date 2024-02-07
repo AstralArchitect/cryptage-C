@@ -11,8 +11,8 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "command": "^0.0.5",
         "commander": "^4.1.1",
-        "paquet": "^1.4.0",
-        "pkg": "^4.5.1"
+        "paquet": "^1.4.0"
     }
 }

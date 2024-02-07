@@ -1,21 +1,20 @@
 # Makefile
 
 # Commande pour exécuter pkg
+RM = rmdir /s /q .\node_modules
+NPM = npm i --global pkg
+NPM2 = npm i paquet command
 PKG = pkg --targets node14-win-x64,node14-macos-x64,node14-linux-x64 .
-MKDIR = mkdir .\compilé
-MOVE = move cryptage-win-x64.exe .\compilé
-MOVE2 = move cryptage-linux-x64 .\compilé
-MOVE3 = move cryptage-macos-x64 .\compilé
+
 # Règle par défaut
 all: package
 
 # Règle pour exécuter pkg
 package:
+    $(RM)
+    $(NPM)
+    $(NPM2)
     $(PKG)
-    $(MKDIR)
-    $(MOVE)
-    $(MOVE2)
-    $(MOVE3)
 
 # Nettoyage des fichiers temporaires
 clean:
