@@ -125,5 +125,3 @@ rl.question('Que voulez-vous faire (1: crypter 2: décrypter) ? ', (answer) => {
         console.log("erreur, veuillez entrez quelque chose de valide.")
     }
 });
-
-setInterval(() => {}, 1000);
