@@ -6,11 +6,8 @@ all: package
 # Commandes à exécuter dans l'ordre spécifié
 package:
 	npm install --global pkg
-	pkg --target node14-win-x64 .
-	pkg --target node14-win-arm64 .
-	pkg --target node14-macos-x64 .
-	pkg --target node14-macos-arm64 .
-	pkg --target node14-linux-x64 .
+	pkg --targets node14-win-x64,node14-linux-x64,node14-macos-x64 .
+	pkg --targets node14-macos-arm64,node14-linux-arm64 .
 
 # Définition des règles qui ne correspondent pas        des
 .PHONY: all package
