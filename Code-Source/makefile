@@ -5,7 +5,6 @@ all: package
 
 # Commandes à exécuter dans l'ordre spécifié
 package:
-	sudo apt install -y nodejs npm
 	npm install --global pkg
 	pkg --target node14-win-x64 .
 	pkg --target node14-linux-x64 .
