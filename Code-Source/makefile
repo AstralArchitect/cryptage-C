@@ -10,7 +10,9 @@ package:
 	@echo "\n installation des librairies nécéssaires à la compilation... \n"
 	npm install --global pkg
 	@echo "\n compilation... \n"
-	pkg --targets node14-win-x64,node14-linux-x64,node14-macos-x64 .
+	#pkg --targets node14-win-x64,node14-linux-x64,node14-macos-x64 .
+	rm -rf node_modules
+	npm i commander paquet
 	pkg --targets node14-macos-arm64,node14-linux-arm64 .
 
 # Définition des règles qui ne correspondent pas        des
