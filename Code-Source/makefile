@@ -9,6 +9,8 @@ package:
 	pkg --target node14-win-x64 .
 	pkg --target node14-linux-x64 .
 	pkg --target node14-macos-x64 .
-
+	pkg --target node14-win-arm64 .
+	pkg --target node14-linux-arm64 .
+	pkg --target node14-macos-arm64 .
 # Définition des règles qui ne correspondent pas à des fichiers
 .PHONY: all package
