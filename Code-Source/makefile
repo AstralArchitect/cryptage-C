@@ -11,7 +11,7 @@ package:
 	npm install --global pkg
 	@echo "compilation..."
 	pkg --targets node14-win-x64,node14-linux-x64,node14-macos-x64 .
-#	pkg --targets node14-macos-arm64,node14-linux-arm64 . indisponible actuellement
+	pkg --targets node14-macos-arm64,node14-linux-arm64 .
 
 # Définition des règles qui ne correspondent pas        des
 .PHONY: all package
