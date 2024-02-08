@@ -17,7 +17,6 @@ package:
     $(NPM2)
     $(PKG)
     $(RM)
-    $(NPM)
     $(NPM2)
     $(PKG2)
 
