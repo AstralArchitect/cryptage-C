@@ -1,10 +1,11 @@
 # Makefile
 
 # Commande pour exécuter pkg
-RM = rmdir /s /q .\node_modules
+RM = rm -rf .\node_modules
 NPM = npm i --global pkg
 NPM2 = npm i paquet command
 PKG = pkg --targets node14-win-x64,node14-macos-x64,node14-linux-x64 .
+PKG2 = pkg --target node14-linux-arm64 .
 
 # Règle par défaut
 all: package
@@ -15,6 +16,10 @@ package:
     $(NPM)
     $(NPM2)
     $(PKG)
+    $(RM)
+    $(NPM)
+    $(NPM2)
+    $(PKG2)
 
 # Nettoyage des fichiers temporaires
 clean:
