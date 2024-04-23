@@ -1,14 +1,14 @@
 {
     "name": "cryptage",
     "version": "1.0.0",
-    "description": "",
+    "description": "Cryptage de messages",
     "main": "main.js",
     "bin": "main.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
-    "author": "",
+    "author": "Astral Architect",
     "license": "ISC",
     "dependencies": {
         "command": "^0.0.5",
