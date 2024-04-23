@@ -5,7 +5,6 @@ all: package
 
 # Commandes à exécuter dans l'ordre spécifié
 package:
-	rm -rf node_modules
 	npm i commander paquet
 	@echo "\n installation des librairies nécéssaires à la compilation... \n"
 	npm install --global pkg
