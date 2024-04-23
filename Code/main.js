@@ -38,7 +38,6 @@ function decrypt(){
             for(i in answer){
                 cle[i] = parseInt(cle[i]);
             }
-            console.log("Votre clé: " + cle);
             deplacementAB(Message, cle);
             rl.close();
         });
@@ -72,7 +71,7 @@ function crypte(){
             for (let i in Message) {
                 Message[i] += cle[i];
             }
-        console.log("Votre Message codé: " + Message);
+            console.log("Votre Message codé: " + Message);
         }
     
     }
@@ -104,7 +103,6 @@ function crypte(){
             for(i in answer){
                 cle[i] = parseInt(cle[i]);
             }
-            console.log("Votre clé: " + cle);
             LettreVersNombre(Message, cle);
             rl.close();
         });
@@ -125,5 +123,3 @@ rl.question('Que voulez-vous faire (1: crypter 2: décrypter) ? ', (answer) => {
         console.log("erreur, veuillez entrez quelque chose de valide.")
     }
 });
-
-setInterval(() => {}, 1000);
