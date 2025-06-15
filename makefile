@@ -4,11 +4,9 @@ all:
 
 # Target to run the compiled binary
 run: all
-	./builddir/cryptage
+	./builddir/vigenere
 
 # Target to set up the build directory
-setupGcc:
-	meson setup builddir --native-file=native-gcc.txt
 setup:
 	meson setup builddir
 
@@ -19,6 +17,3 @@ ifeq ($(OS),Windows_NT)
 else
 	@if [ -d builddir ]; then rm -rf builddir; fi
 endif
-
-resetup: clean setup
-resetupGcc: clean setupGcc

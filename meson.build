@@ -1,3 +1,3 @@
-project('cryptage', 'c', version: '2.0.0')
+project('cryptage', 'cpp', version: '2.0.0')
 
-executable('cryptage', 'src/main.c')
+executable('vigenere', 'src/main.cc', 'src/vigenere.cc')
